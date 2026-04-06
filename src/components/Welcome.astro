@@ -1,242 +1,60 @@
 ---
 import background from '../assets/background.svg';
+import '../styles.css';
 ---
 
 <div id="container">
 	<img id="background" src={background.src} alt="" fetchpriority="high" />
+	<header>
+		<h1>Sistema de Gestión de Estacionamientos UBB</h1>
+		<nav>
+			<a href="#hero">Inicio</a>
+			<a href="#problem">Problema</a>
+			<a href="#solution">Solución</a>
+			<a href="#features">Características</a>
+		</nav>
+	</header>
 	<main>
 		<section id="hero">
-			<div class="coming-soon-content">
-				<div class="construction-icon">🚀</div>
-				<h1>¡Estamos trabajando en algo especial!</h1>
-				<p class="subtitle">Esta página está en desarrollo</p>
-				<p class="description">Nos encantaría contar contigo cuando lancemos. Déjanos tu correo para notificarte cuando esté lista.</p>
-				
-				<form id="newsletter-form" class="newsletter-form">
-					<input 
-						type="email" 
-						placeholder="tu@email.com" 
-						required
-						class="email-input"
-					/>
-					<button type="submit" class="submit-btn">Notificarme</button>
-				</form>
-				
-				<p class="follow-text">Mientras tanto, síguenos en redes sociales</p>
-				<div class="social-links">
-					<a href="#" class="social-link" title="Twitter">𝕏</a>
-					<a href="#" class="social-link" title="LinkedIn">in</a>
-					<a href="#" class="social-link" title="Instagram">📷</a>
+			<div class="hero-content">
+				<h2>Gestión y Predicción de Ocupación Vehicular</h2>
+				<p>Optimizando la movilidad en el Campus Concepción mediante Visión Computacional y Edge Computing.</p>
+				<button class="cta-btn">Explorar Sistema</button>
+			</div>
+		</section>
+		<section id="problem">
+			<h3>El Problema</h3>
+			<p>La búsqueda manual de estacionamientos genera congestión, pérdida de tiempo y falta de datos para la gestión eficiente de la infraestructura universitaria.</p>
+		</section>
+		<section id="solution">
+			<h3>Nuestra Solución</h3>
+			<p>Un sistema distribuido que monitorea en tiempo real la disponibilidad de plazas y predice la ocupación futura, utilizando tecnologías avanzadas para una movilidad optimizada.</p>
+		</section>
+		<section id="features">
+			<h3>Características Principales</h3>
+			<div class="features-grid">
+				<div class="feature">
+					<h4>Monitoreo en Tiempo Real</h4>
+					<p>Visión Computacional con YOLO para detectar plazas disponibles u ocupadas.</p>
+				</div>
+				<div class="feature">
+					<h4>Análisis Predictivo</h4>
+					<p>Machine Learning para proyectar la disponibilidad futura basada en datos históricos.</p>
+				</div>
+				<div class="feature">
+					<h4>Edge Computing</h4>
+					<p>Procesamiento en el borde para minimizar el uso de ancho de banda y asegurar escalabilidad.</p>
+				</div>
+				<div class="feature">
+					<h4>Plataforma Web Responsiva</h4>
+					<p>Acceso universal desde cualquier dispositivo con mapa interactivo y consultas predictivas.</p>
 				</div>
 			</div>
 		</section>
 	</main>
+	<footer>
+		<p>&copy; 2026 Universidad del Bío-Bío. Proyecto de Titulación - Sergio Guzmán y Walter Meza.</p>
+	</footer>
 </div>
 
-<style>
-	#background {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		filter: blur(100px);
-	}
 
-	#container {
-		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-		height: 100%;
-	}
-
-	main {
-		height: 100%;
-		display: flex;
-		justify-content: center;
-	}
-
-	#hero {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 20px;
-		width: 100%;
-	}
-
-	.coming-soon-content {
-		text-align: center;
-		max-width: 600px;
-		animation: fadeIn 0.8s ease-in;
-	}
-
-	@keyframes fadeIn {
-		from {
-			opacity: 0;
-			transform: translateY(20px);
-		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
-
-	.construction-icon {
-		font-size: 60px;
-		margin-bottom: 20px;
-		animation: bounce 2s infinite;
-	}
-
-	@keyframes bounce {
-		0%, 100% {
-			transform: translateY(0);
-		}
-		50% {
-			transform: translateY(-10px);
-		}
-	}
-
-	h1 {
-		font-size: 48px;
-		margin: 0 0 10px 0;
-		color: #111827;
-		font-weight: 700;
-		letter-spacing: -0.02em;
-	}
-
-	.subtitle {
-		font-size: 24px;
-		color: #6b7280;
-		margin: 0 0 20px 0;
-		font-weight: 500;
-	}
-
-	.description {
-		font-size: 16px;
-		color: #4b5563;
-		line-height: 24px;
-		margin: 0 0 30px 0;
-	}
-
-	.newsletter-form {
-		display: flex;
-		gap: 12px;
-		margin-bottom: 40px;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-
-	@media (max-width: 600px) {
-		.newsletter-form {
-			flex-direction: column;
-		}
-	}
-
-	.email-input {
-		flex: 1;
-		min-width: 250px;
-		padding: 12px 16px;
-		border: 2px solid #e5e7eb;
-		border-radius: 10px;
-		font-size: 16px;
-		font-family: inherit;
-		transition: all 0.3s ease;
-		outline: none;
-	}
-
-	.email-input:focus {
-		border-color: #3245ff;
-		box-shadow: 0 0 0 3px rgba(50, 69, 255, 0.1);
-	}
-
-	.email-input::placeholder {
-		color: #9ca3af;
-	}
-
-	.submit-btn {
-		padding: 12px 32px;
-		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
-		color: white;
-		border: none;
-		border-radius: 10px;
-		font-size: 16px;
-		font-weight: 600;
-		cursor: pointer;
-		transition: all 0.3s ease;
-		box-shadow: 0 4px 15px rgba(50, 69, 255, 0.3);
-		white-space: nowrap;
-	}
-
-	.submit-btn:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 6px 20px rgba(50, 69, 255, 0.4);
-	}
-
-	.submit-btn:active {
-		transform: translateY(0);
-	}
-
-	.follow-text {
-		font-size: 14px;
-		color: #9ca3af;
-		margin: 0 0 15px 0;
-	}
-
-	.social-links {
-		display: flex;
-		gap: 20px;
-		justify-content: center;
-	}
-
-	.social-link {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		width: 40px;
-		height: 40px;
-		border-radius: 50%;
-		background: rgba(50, 69, 255, 0.1);
-		color: #3245ff;
-		text-decoration: none;
-		font-weight: 600;
-		font-size: 18px;
-		transition: all 0.3s ease;
-	}
-
-	.social-link:hover {
-		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
-		color: white;
-		transform: translateY(-3px);
-	}
-
-	#links {
-		display: none;
-	}
-
-	p {
-		margin: 0;
-	}
-
-	@media screen and (max-width: 768px) {
-		#container {
-			display: flex;
-			flex-direction: column;
-		}
-
-		#hero {
-			display: flex;
-			padding-top: 10%;
-		}
-
-		h1 {
-			font-size: 36px;
-		}
-
-		.subtitle {
-			font-size: 18px;
-		}
-
-		.email-input {
-			min-width: 200px;
-		}
-	}
-</style>
