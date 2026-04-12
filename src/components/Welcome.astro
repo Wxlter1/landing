@@ -1,59 +1,144 @@
 ---
 import background from '../assets/background.svg';
+import escudo from '../assets/escudo-ubb.png';
 import '../styles.css';
 ---
 
 <div id="container">
-	<img id="background" src={background.src} alt="" fetchpriority="high" />
-	<header>
-		<h1>Sistema de Gestión de Estacionamientos UBB</h1>
+	<img id="background" src={background.src} alt="Fondo de landing" fetchpriority="high" />
+
+	<header class="topbar">
+		<div class="brand">
+			<img src={escudo.src} alt="Escudo UBB" class="brand-logo" />
+			<div>
+				<p class="brand-title">Universidad del Bío-Bío</p>
+				<span class="brand-subtitle">Facultad de Ciencias Empresariales</span>
+			</div>
+		</div>
 		<nav>
-			<a href="#hero">Inicio</a>
-			<a href="#problem">Problema</a>
+			<a href="#problem">Problemática</a>
+			<a href="#proposal">Propuesta</a>
 			<a href="#solution">Solución</a>
-			<a href="#features">Características</a>
+			<a href="#impact">Impacto</a>
 		</nav>
 	</header>
+
 	<main>
-		<section id="hero">
-			<div class="hero-content">
-				<h2>Gestión y Predicción de Ocupación Vehicular</h2>
-				<p>Optimizando la movilidad en el Campus Concepción mediante Visión Computacional y Edge Computing.</p>
-				<button class="cta-btn">Explorar Sistema</button>
-			</div>
-		</section>
-		<section id="problem">
-			<h3>El Problema</h3>
-			<p>La búsqueda manual de estacionamientos genera congestión, pérdida de tiempo y falta de datos para la gestión eficiente de la infraestructura universitaria.</p>
-		</section>
-		<section id="solution">
-			<h3>Nuestra Solución</h3>
-			<p>Un sistema distribuido que monitorea en tiempo real la disponibilidad de plazas y predice la ocupación futura, utilizando tecnologías avanzadas para una movilidad optimizada.</p>
-		</section>
-		<section id="features">
-			<h3>Características Principales</h3>
-			<div class="features-grid">
-				<div class="feature">
-					<h4>Monitoreo en Tiempo Real</h4>
-					<p>Visión Computacional con YOLO para detectar plazas disponibles u ocupadas.</p>
+		<section id="hero" class="hero-section">
+			<div class="hero-copy">
+				<p class="eyebrow">Proyecto de Título</p>
+				<h1>Desarrollo de un Sistema Distribuido de Gestión y Predicción de Ocupación Vehicular</h1>
+				<p>Una plataforma web para el Campus Concepción que combina Visión Computacional y Edge Computing para mejorar la movilidad y la gestión de estacionamientos.</p>
+				<div class="hero-actions">
+					<a class="btn primary" href="#proposal">Ver propuesta</a>
+					<a class="btn secondary" href="#solution">Cómo funciona</a>
 				</div>
-				<div class="feature">
-					<h4>Análisis Predictivo</h4>
-					<p>Machine Learning para proyectar la disponibilidad futura basada en datos históricos.</p>
-				</div>
-				<div class="feature">
-					<h4>Edge Computing</h4>
-					<p>Procesamiento en el borde para minimizar el uso de ancho de banda y asegurar escalabilidad.</p>
-				</div>
-				<div class="feature">
-					<h4>Plataforma Web Responsiva</h4>
-					<p>Acceso universal desde cualquier dispositivo con mapa interactivo y consultas predictivas.</p>
+				<div class="hero-highlights">
+					<span>Monitoreo en tiempo real</span>
+					<span>Predicción inteligente</span>
+					<span>Arquitectura escalable</span>
 				</div>
 			</div>
+			<div class="hero-card">
+				<div class="hero-card-inner">
+					<div class="card-tag">Propuesta Innovadora</div>
+					<div class="card-title">Gestión y predicción para estacionamientos universitarios</div>
+					<div class="card-features">
+						<div class="stat">
+							<strong>3 módulos</strong>
+							<p>Captura Edge, backend y frontend responsivo.</p>
+						</div>
+						<div class="stat">
+							<strong>Menor ancho de banda</strong>
+							<p>Solo se transmiten estados de ocupación.</p>
+						</div>
+						<div class="stat">
+							<strong>Predicción futura</strong>
+							<p>Modelo ML para probabilidades de plazas.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="problem" class="section-card">
+			<div class="section-grid">
+				<div>
+					<h2>Problemática del proyecto</h2>
+					<p>En el campus Concepción, la búsqueda manual de estacionamiento genera congestión, pérdida de tiempo y falta de datos que permitan una gestión eficiente de los espacios.</p>
+					<ul class="list-check">
+						<li>Circulación lenta y embotellamientos internos.</li>
+					<li>Usuarios recorren sectores sin saber disponibilidad.</li>
+						<li>Administración sin métricas históricas ni en tiempo real.</li>
+					</ul>
+				</div>
+				<div class="impact-box">
+					<h3>Consecuencias actuales</h3>
+					<div class="impact-item"><strong>Congestión:</strong> vehículos circulan en busca de cupos.</div>
+					<div class="impact-item"><strong>Retrasos:</strong> estudiantes y funcionarios llegan tarde.</div>
+					<div class="impact-item"><strong>Falta de datos:</strong> no hay información para decisiones operativas.</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="proposal" class="section-card gradient-card">
+			<h2>Nuestra propuesta</h2>
+			<p>Desarrollar un sistema distribuido de captura, procesamiento y análisis para la gestión inteligente de estacionamientos en la UBB.</p>
+			<div class="feature-list">
+				<div class="feature-step">
+					<span>1</span>
+					<div>
+						<h4>Captura y Visión Computacional</h4>
+						<p>Nodos Edge identifican plazas libres u ocupadas a partir de imágenes locales.</p>
+					</div>
+				</div>
+				<div class="feature-step">
+					<span>2</span>
+					<div>
+						<h4>Backend Predictivo</h4>
+						<p>API contenerizada recibe telemetría y genera análisis histórico para modelar la demanda.</p>
+					</div>
+				</div>
+				<div class="feature-step">
+					<span>3</span>
+					<div>
+						<h4>Web Responsiva</h4>
+						<p>Interfaz móvil y escritorio con mapa interactivo y consulta de probabilidades de disponibilidad.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="solution" class="section-card">
+			<h2>Solución automatizada y escalable</h2>
+			<p>El sistema reduce el tráfico interno, aporta métricas reales y hace viable el monitoreo de estacionamientos sin saturar la red.</p>
+			<div class="solution-grid">
+				<div class="solution-card">
+					<h4>Automatización</h4>
+					<p>Elimina la entrada manual de datos con detección de objetos.</p>
+				</div>
+				<div class="solution-card">
+					<h4>Escalabilidad</h4>
+					<p>Procesamiento en el borde para cubrir múltiples sectores sin enviar video.</p>
+				</div>
+				<div class="solution-card">
+					<h4>Predicción</h4>
+					<p>Modelo de Machine Learning anticipa la ocupación según horario y día.</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="impact" class="section-card footer-callout">
+			<div>
+				<h2>¿Por qué este proyecto?</h2>
+				<p>Porque une visión computacional, Edge Computing y análisis predictivo para modernizar la gestión de estacionamientos universitarios.</p>
+			</div>
+			<a class="btn primary" href="#hero">Volver al inicio</a>
 		</section>
 	</main>
+
 	<footer>
-		<p>&copy; 2026 Universidad del Bío-Bío. Proyecto de Titulación - Sergio Guzmán y Walter Meza.</p>
+		<p>© 2026 Universidad del Bío-Bío. Proyecto de Titulación. Sergio Guzmán y Walter Meza.</p>
 	</footer>
 </div>
 
